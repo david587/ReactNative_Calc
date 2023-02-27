@@ -21,7 +21,6 @@ export default function App() {
   Alert.alert("Névejegy","Baráth Dávid", "Szoft 2 N, 2023-02-27");
  }
 
-
   return (
     <View style={styles.container}>
       <Button title='névjegy' onPress={showAbout}/>
