@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 import { TouchableHighlight } from 'react-native-web';
 
 export default function App() {
@@ -16,9 +16,15 @@ export default function App() {
   setNumber(0)
  }
 
+ function showAbout()
+ {
+  Alert.alert("Névejegy","Baráth Dávid", "Szoft 2 N, 2023-02-27");
+ }
+
 
   return (
     <View style={styles.container}>
+      <Button title='névjegy' onPress={showAbout}/>
       <Text style={[styles.szoveg,styles.margo]}>ForgalomSzámlálás</Text>
       <Button onPress={increment} title='számol'/>
       <Text style={styles.margo}>Megyszámolt jármüvek: {number}</Text>
